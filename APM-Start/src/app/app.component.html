@@ -2,13 +2,13 @@
   <a class="navbar-brand">{{pageTitle}}</a>
   <ul class="navbar-nav">
     <li class="nav-item">
-      <a class="nav-link">Home</a>
+      <a class="nav-link" [routerLink]="['/welcome']">Home</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link">Product List</a>
+      <a class="nav-link"  [routerLink]="['/products']">Product List</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link">Add Product</a>
+      <a class="nav-link" [routerLink]="['/products', 0, 'edit']">Add Product</a>
     </li>
   </ul>
   <ul class="navbar-nav ml-auto">
@@ -21,7 +21,8 @@
     </li>
     <li class="nav-item"
         *ngIf="!isLoggedIn">
-      <a class="nav-link">Log In</a>
+      <a class="nav-link"
+      [routerLink]="['/login']">Log In</a>
     </li>
     <li class="nav-item"
         *ngIf="isLoggedIn">
@@ -31,5 +32,5 @@
   </ul>
 </nav>
 <div class="container">
-  <pm-home></pm-home>
+  <router-outlet></router-outlet>
 </div>
