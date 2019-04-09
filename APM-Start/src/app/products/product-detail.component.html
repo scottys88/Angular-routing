@@ -46,8 +46,8 @@
         </div>
       </div>
 
-      <div class="col-md-4"
-           *ngIf="product.imageUrl">
+      <div class="col-md-3"
+           *ngIf="product.imageUrl"> 
         <img class="center-block img-responsive"
              [style.height.px]="150"
              [style.margin.px]="2"
@@ -62,7 +62,7 @@
                 style="width:80px">
           <i class="fa fa-chevron-left"></i> Back
         </button>
-        <button class="btn btn-outline-primary"
+        <button [routerLink]="['edit']" class="btn btn-outline-primary"
                 style="width:80px">
           Edit
         </button>
